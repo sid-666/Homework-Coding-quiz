@@ -6,34 +6,150 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body{
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+        main{
+            align-items: center;
+            justify-content: center;
+            width: 98vw;
+            height: 99vh;
+            display: flex;
+            padding-right: 30px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .high-score{
+            padding: 0;
+            display: inline-block;
+        }
+        .timer{
+            float: right;
+        }
+        .container{
+            padding-top: 10%;
+            padding-right: 0;
+            margin: 0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .container1{
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            overflow: hidden;
+        }
+        .quiz-intro, .card, .All-done{
+            width: 400px;
+            height: 300px;
+            font-size: large;
+        }
+        
+        .High-Score{
+            display: block;
+            justify-content: center;
+
+        }
+        
+        button{
+            background-color: purple;
+            color:azure;
+            width: 60px;
+        }
+        button:hover{
+            background-color:rgb(161, 20, 110);
+            border-color: white;
+        }
+       .answer{
+            width: 400px;
+            display: grid;
+            gap: 10px;
+       }
+       .return{
+           margin-top: 15px;
+           display:grid;
+           grid-template-columns: repeat(2, 80px);
+           column-gap: 80px;
+       }
+       .return-btn{
+           width: 80px;   
+       }
+       .hide{
+           display: none;
+       }
+
+    </style>
+    <script>
+        function timerCountDown(){
+
+        }
+        function startGame(){
+
+        }
+        function selectAnswer(){
+
+        }
+        function postInitial(){
+
+        }
+        function viewHighscore(){
+
+        }
+        function resetGame(){
+            
+        }
+    </script>
     <main>
-        <div>
+        <div class="container1">
+            <div class="high-score">View Highscore:</div>
             <div class="timer">Timer:0</div>
-            <div class="high-score">Your Highscore:</div>
-            <div class="quiz-intro">
-                <h1> About Quiz</h1>
-                <p> asdadsdadsdaxsdadsdxsddsddds</p>
-            </div>
-            <div class="question/answer/result">
-                <div class="question">
-                    <h1> Question</h1>
+            <div class="container">
+                <div class="quiz-intro">
+                    <h1> Start Quiz</h1>
+                    <p> Press the start button to start the quiz</p>
+                    <button>start</button>
+                </div class= "card">
+                    <div class="question/answer/result hide">
+                        <div class="question">
+                            <h1> question</h1>
+                        </div>
+                         <div class="answer">
+                            <button class="answers"> Ans1</button>
+                            <button class="answers">Ans2</button>
+                            <button class="answers">Ans3</button>
+                            <button class="answers">Ans4</button>
+                        </div>
+                        <div class="result">Right/Wrong not sure if needed</div>
+                    </div>
                 </div>
-                <div class="answer">
-                    <button class="answer1"> Ans1</button>
-                    <button class="answer2">Ans2</button>
-                    <button class="answer3">Ans3</button>
-                    <button class="answer4">Ans4</button>
+                <div class="All-done hide">
+                    <h1>All-done</h1>
+                    <form>
+                        <label for="Personinit">Your initials</label>
+                        <input type="text" name= "Initials" value="Personinit">
+                        <button>Submit</button>
+                        
+                    </form>
                 </div>
-                <div class="result">Right/Wrong not sure if needed</div>
             </div>
-            <div class="All-done">
-                <form>
-                    <input type="text" name= "Initials" value="Personinit">
-                    <label for="Personinit">Your initials</label>
-                </form>
-            </div>   
+               
         </div>
-        <div class="Display-H.S">Hi for now</div>
+        <div class="High-Score hide"  >
+            <h1>Your Highscore</h1>
+            <form>
+                <label for="H-S">Your score</label>
+                <input type="text" name= "Score" value="Personinit-score">  
+            </form>
+            <div class="return">
+                <button class="return-btn">Go-back</button>
+                <button class="return-btn">Go-back</button>
+            </div>  
+        </div>
        
     </main>
 </body>
