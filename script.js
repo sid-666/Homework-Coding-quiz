@@ -36,6 +36,7 @@ var questions = [
         correct: "Great"
     }
 ]
+//Timer for quiz
 function timerCountDown(){
         Interval = setInterval(function() {
         --SecondsLeft;
@@ -48,13 +49,14 @@ function timerCountDown(){
     
       }, 1000);
 }
-
+// Direct Link to scoreboard
 function accessHighScore(){
     document.getElementById("container1").classList.add("hide")
     document.getElementById("HighScore").classList.remove("hide");
     viewHighscore()
 
 }
+//start button event function
 function startGame(){
      document.getElementById("quizintro").classList.add("hide");
      mixedQuestions = questions.sort(()=>Math.random()-.5);
@@ -63,10 +65,12 @@ function startGame(){
      setnextquestion();
      timerCountDown()
 }
+//Setting the next question after answer is clicked
 function setnextquestion(){
     resetState()
     displayQuestion(mixedQuestions[currentQuestionIndex])
 }
+//Displaying the question as text
 function displayQuestion(question){
     QuestionEl.textContent = question.question
     question.options.forEach(option => {
@@ -79,10 +83,11 @@ function displayQuestion(question){
         AnswerButtons.appendChild(button)
     });
 }
+//Resetting answer button for each question
 function resetState(){
     AnswerButtons.innerHTML = ""
 }
-
+// What happens when you select an answer (time reduction, displaying correct wrong below, moving to the next question)
 function selectAnswer(e){
     var selectedButton = e.target
     var correct = selectedButton.getAttribute("status")
