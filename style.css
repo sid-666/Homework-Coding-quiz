@@ -1,0 +1,70 @@
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+    height: 99vh;
+    display: flex;
+    padding-right: 30px;
+    margin: 0;
+    overflow: hidden;
+}
+.highscore{
+    padding: 0;
+    display: inline-block;
+}
+.timer{
+    float: right;
+}
+.container{
+    padding-top: 10%;
+    padding-right: 0;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.container1{
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+}
+
+.High-Score{
+    display: block;
+    justify-content: center;
+
+}
+
+button{
+    background-color: purple;
+    color:azure;
+    width: 60px;
+}
+button:hover{
+    background-color:rgb(161, 20, 110);
+    border-color: white;
+}
+.answer{
+    width: 400px;
+    display: grid;
+    gap: 10px;
+}
+.return{
+   margin-top: 15px;
+   display:grid;
+   grid-template-columns: repeat(2, 80px);
+   column-gap: 80px;
+}
+.return-btn{
+   width: 80px;   
+}
+.hide{
+   display: none;
+}
